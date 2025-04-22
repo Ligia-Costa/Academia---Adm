@@ -15,7 +15,7 @@ const listaAlunos = document.getElementById('lista-alunos');
 const status = selectStatus.value === "Ativo";
 
 async function buscarListarAlunos() {
-  console.log('oi')
+  console.log('teste')
   try {
     const respostaHttp = await fetch(ENDPOINT_ALUNOS);
     const alunos = await respostaHttp.json();
