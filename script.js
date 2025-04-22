@@ -44,7 +44,7 @@ function exibirAlunosNaTela(alunos) {
       <p><strong>ID:</strong> ${aluno.id}</p>
       <div class="mt-2 flex gap-2">
         ${aluno.status === 'Bloqueado' ? `
-          <button onclick="reativarAluno(${aluno.id}, '${aluno.nome}', '${aluno.cpf}')" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">
+          <button onclick="reativarAluno(${aluno.id}, '${aluno.nome}', '${aluno.cpf}')" class="bg-purple-500 hover:bg-purple-600 text-white px-3 py-1 rounded">
             Reativar
           </button>
         ` : `
