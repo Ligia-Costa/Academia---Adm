@@ -206,14 +206,15 @@ async function excluirMatricula(id) {
   
   } catch (erro) {
     alert("Erro ao excluir aluno: " + erro.message);
-};  
+};
+};
 
-document.querySelector('input[type="text"]').addEventListener('input', function (e) {
+document.getElementById('inputBusca').addEventListener('input', function (e) {
   const termo = e.target.value.toLowerCase();
-  const cards = document.querySelectorAll('#lista-alunos > div');
-  cards.forEach(card => {
-    const nome = card.textContent.toLowerCase();
-    card.style.display = nome.includes(termo) ? '' : 'none';
+  const todosCards = document.querySelectorAll('#lista-alunos > div, #lista-bloqueados > div');
+
+  todosCards.forEach(card => {
+    const texto = card.textContent.toLowerCase();
+    card.style.display = texto.includes(termo) ? '' : 'none';
   });
 });
-}
